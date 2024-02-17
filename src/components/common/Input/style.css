@@ -1,0 +1,17 @@
+.custom-input{
+    width:70vw;
+    background-color: var(--theme);
+    border:2px solid var(--purpal-gray);
+    padding:.8rem;
+    color:var(--white);
+    border-radius: .35rem;
+    font-size:1rem;
+    margin:.5rem;
+}
+.custom-input:focus{
+    outline:none;
+    border-color:var(--white)
+}
+.custom-input::placeholder{
+    color:var(--purpal-gray)
+}
