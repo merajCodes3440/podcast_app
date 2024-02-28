@@ -63,7 +63,8 @@ function PodcastDetailsPage() {
       <div className="input-wrapper" style={{ marginTop: "0rem" }}>
         {podcast.id && (
           <>
-            <div
+            <div 
+              className="episode-create-btn-div" 
               style={{
                 display: "flex",
                 justifyContent: "space-between",

@@ -12,6 +12,7 @@ body {
   font-family: "Inter", sans-serif;
   color:var(--white);
   background-color: var(--theme);
+  box-sizing: border-box;
 }
 .input-wrapper{
   width:80vw;
@@ -51,6 +52,7 @@ a{
   padding:.5rem;
   height:300px;
   width:100%;
+  object-fit: contain;
 }
 .banner-wrapper img{
    width:100%;
@@ -92,6 +94,12 @@ a{
 .card-p{
   margin:.4rem;
 }
-@media screen and (min-width: 480px) {
-   
+@media screen and (max-width: 600px) {
+    body{
+      font-size: .8rem;
+    }
+    .episode-create-btn-div{
+      width:100% !important;
+      padding:0 .5rem;
+    }
 }
