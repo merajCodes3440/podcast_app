@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 function Header() {
   const location = useLocation();
   const currentPath = location.pathname;
-  console.log(currentPath);
+  //console.log(currentPath);
 
   return (
     <div className="navbar">

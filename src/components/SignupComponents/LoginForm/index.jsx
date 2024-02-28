@@ -36,7 +36,7 @@ const navigate =useNavigate();
         // saving user's details
         const userDoc = await getDoc(doc(db,"users",user.uid));
         const userData = userDoc.data();
-        console.log("userData",userData);
+       // console.log("userData",userData);
         // save data into redux , call the redux action
   
         dispatch(setUser({

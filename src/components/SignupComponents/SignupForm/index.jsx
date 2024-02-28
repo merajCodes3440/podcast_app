@@ -17,7 +17,6 @@ function SignupForm() {
   const [password, setPassword] = useState("");
   const [conformPassword, setConformPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [fileURL, setFileURL] = useState("");
 
   const navigate = useNavigate();
 
@@ -34,18 +33,12 @@ function SignupForm() {
         );
         const user = userCredential.user;
 
-        // Upload file to Firebase Storage
-        const storageRef = storage.ref();
-        const fileRef = storageRef.child(`profile-pics/${user.uid}`);
-        await fileRef.put(file);
-        const downloadURL = await fileRef.getDownloadURL();
-
         // saving user's details
         await setDoc(doc(db, "users", user.uid), {
           name: fullName,
           email: user.email,
           uid: user.uid,
-          profilePic: downloadURL,
+         // profilePic: downloadURL,
         });
         // save data into redux , call the redux action
         dispatch(
@@ -53,7 +46,7 @@ function SignupForm() {
             name: fullName,
             email: user.email,
             uid: user.uid,
-            profilePic: downloadURL,
+          //  profilePic: downloadURL,
           })
         );
         setLoading(false);
@@ -102,14 +95,6 @@ function SignupForm() {
         setState={setConformPassword}
         placeholder="Conform Password"
         type="password"
-        required={true}
-      />
-
-      <InputComponent
-        state={fileURL}
-        setState={setFileURL}
-        placeholder="Profile pic"
-        type="file"
         required={true}
       />
 
