@@ -33,10 +33,9 @@ const navigate =useNavigate();
          password
         )
         const user =userCredential.user;
-       // console.log("user ---->",user)
         // saving user's details
         const userDoc = await getDoc(doc(db,"users",user.uid));
-        const userData =userDoc.data();
+        const userData = userDoc.data();
         console.log("userData",userData);
         // save data into redux , call the redux action
   
@@ -78,7 +77,8 @@ const navigate =useNavigate();
         required={true}
       />
       
-       <Button text={loading? "Loading...": "Signup"} onClick={handleLogin} disabled={loading}/>
+       <Button text={loading? "Loading...": "Signup"}
+        onClick={handleLogin} disabled={loading}/>
     </>
   )
 }

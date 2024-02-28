@@ -15,7 +15,7 @@ function Header() {
           Signup
         </Link>
         <Link
-          to="/podcast"
+          to="/podcasts"
           className={currentPath == "/podcast" ? "active" : ""}
         >
           Podcast
@@ -32,6 +32,11 @@ function Header() {
         >
           Profile
         </Link>
+        
+        {/* <Link to="/podcast/Whl1a39IGv3KsSgsZ0Bn/create-episode" className={currentPath === "/podcast/Whl1a39IGv3KsSgsZ0Bn/create-episode" ? "active" : ""}>
+          Create Episode
+        </Link> */}
+
       </div>
     </div>
   );

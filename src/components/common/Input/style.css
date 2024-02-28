@@ -15,3 +15,9 @@
 .custom-input::placeholder{
     color:var(--purpal-gray)
 }
+.label-input{
+    color:var(--purpal-gray)  
+}
+.active{
+    border-color:var(--white) 
+}
